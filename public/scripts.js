@@ -117,7 +117,7 @@ function showInputBox() {
 function submitThoughts() {
     const thoughts = document.getElementById('thoughts').value;
     
-    fetch('/submit-thoughts', {
+    fetch('https://dear-hn-five.vercel.app/submit-thoughts', {
         method: 'POST',
         body: JSON.stringify({ "thought": thoughts })
     }).then(response => {
