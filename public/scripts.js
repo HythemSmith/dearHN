@@ -119,7 +119,7 @@ function submitThoughts() {
     
     fetch('/submit-thoughts', {
         method: 'POST',
-        body: JSON.stringify({ thought: thoughts })
+        body: JSON.stringify({ "thought": thoughts })
     }).then(response => {
         if (response.ok) {
             alert('Cảm ơn Hồng Nhung đã chia sẽ!');
