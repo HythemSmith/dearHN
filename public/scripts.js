@@ -116,12 +116,13 @@ function showInputBox() {
 
 function submitThoughts() {
     const thoughts = document.getElementById('thoughts').value;
+    
     fetch('/submit-thoughts', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ thoughts })
+        body: JSON.stringify({ thought: thoughts })
     }).then(response => {
         if (response.ok) {
             alert('Cảm ơn Hồng Nhung đã chia sẽ!');
