@@ -119,9 +119,6 @@ function submitThoughts() {
     
     fetch('/submit-thoughts', {
         method: 'POST',
-        headers: {
-            'Content-Type': 'text/json'
-        },
         body: JSON.stringify({ thought: thoughts })
     }).then(response => {
         if (response.ok) {
